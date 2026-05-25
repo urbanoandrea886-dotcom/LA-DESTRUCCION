@@ -1,0 +1,150 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* CAMBIO: Un verde clarito de fondo en lugar de blanco frío */
+    background-color: #eef7f2; 
+    color: #2c3e50;
+    font-size: 18px; 
+    line-height: 1.6;
+}
+
+/* Menú de Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    /* CAMBIO: Fondo verde menta pastel para que no se pierda con el cuerpo */
+    background-color: #dcede1; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #1e6b3b; /* Verde más oscuro para contraste */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #445e4a;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #27ae60;
+    border-bottom: 2px solid #27ae60; /* Subrayado elegante al pasar el mouse */
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    /* CAMBIO: Fondo ligeramente más verdoso que el cuerpo para resaltar el contenido */
+    background-color: #f7fdfa; 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+h1, h2 {
+    color: #1e4620; /* Verde bosque */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Galería de la Página Principal */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px; /* Un poco más redondeado */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    /* CAMBIO: Borde verde suave para las imágenes */
+    border: 3px solid #d1e7d9; 
+}
+
+/* Diseño de Tarjetas (Animales y Fundaciones) */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #c8e6c9; /* Borde sutil verde */
+    border-bottom: 5px solid #27ae60; /* Detalle verde más marcado abajo */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta-cuerpo {
+    padding: 20px;
+}
+
+.tarjeta-cuerpo h3 {
+    margin-bottom: 10px;
+    color: #27ae60;
+}
+
+/* Listas estilizadas (Acciones y Ayuda) */
+.bloque-verde {
+    background-color: #d5f5e3; /* CAMBIO: Verde clarito más vibrante */
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px solid #abebc6;
+}
+
+.bloque-verde ul {
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+.bloque-verde li {
+    margin-bottom: 12px;
+    font-size: 19px;
+    color: #1b4d31; /* Texto verde oscuro muy legible */
+}
+
+/* Footer fijo abajo */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1a2f23; /* CAMBIO: Verde muy oscuro en lugar de gris/azul */
+    color: #dcede1;
+    margin-top: 40px;
+    font-size: 15px;
+}
