@@ -1,39 +1,31 @@
-/* Configuración General */
+/* 1. RESET Y FONDO NEGRO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #000000; /* Fondo negro absoluto */
-    color: #ffffff; /* Texto blanco puro */
-    font-size: 18px; 
-    line-height: 1.6;
+    background-color: #000000 !important; /* FONDO NEGRO ABSOLUTO */
+    color: #ffffff !important; /* TEXTO BLANCO GENERAL */
+    font-size: 18px;
 }
 
-/* Forzar visibilidad máxima en todos los textos descriptivos */
-p {
-    color: #ffffff !important;
-    font-weight: 500; /* Letra con grosor medio para que no se vea delgada */
-    margin-bottom: 15px;
+/* 2. FORZAR LETRAS BLANCAS EN TODO EL DOCUMENTO */
+/* Esto obliga a que CUALQUIER párrafo o texto sea blanco */
+p, span, li, div, h3 {
+    color: #ffffff !important; 
+    font-weight: 500 !important; /* Letra clara y fuerte */
 }
 
-/* Menú de Navegación */
+/* 3. NAVEGACIÓN */
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #111111; /* Gris casi negro para el menú */
-    border-bottom: 2px solid #2ecc71; /* Línea verde brillante divisoria */
-}
-
-nav .logo {
-    font-weight: bold;
-    font-size: 26px;
-    color: #2ecc71;
+    justify-content: center;
+    padding: 20px;
+    background-color: #111111;
+    border-bottom: 2px solid #2ecc71;
 }
 
 nav ul {
@@ -42,39 +34,37 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Letras del menú blancas */
-    font-weight: 700; /* Letra negrita */
-    transition: 0.3s;
+    color: #ffffff !important; /* Enlaces blancos */
+    font-weight: bold;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: #2ecc71;
+nav ul li a:hover {
+    color: #2ecc71 !important;
 }
 
-/* Contenedor Principal */
+/* 4. CONTENEDOR Y TÍTULOS */
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 20px;
+    text-align: center;
 }
 
 h1, h2 {
-    color: #2ecc71; /* Títulos en verde brillante */
+    color: #2ecc71 !important; /* Títulos en Verde para resaltar */
     margin-bottom: 25px;
-    text-align: center;
-    font-weight: 800; /* Muy negritas */
-    text-transform: uppercase; /* Mayúsculas para más impacto */
+    font-weight: 800;
 }
 
-/* Galería de la Página Principal */
+/* 5. GALERÍA */
 .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
@@ -83,73 +73,27 @@ h1, h2 {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 3px solid #2ecc71; /* Marco verde para que la foto resalte en el negro */
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);
+    border-radius: 10px;
+    border: 3px solid #2ecc71; /* Marco verde para que se vea en lo oscuro */
 }
 
-/* Diseño de Tarjetas (Secciones de Animales y Contacto) */
-.grid-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.tarjeta {
-    background: #111111;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 2px solid #333333;
-    transition: 0.3s;
-}
-
-.tarjeta:hover {
-    border-color: #2ecc71; /* Se ilumina al pasar el mouse */
-}
-
-.tarjeta img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.tarjeta-cuerpo {
+/* 6. TARJETAS Y BLOQUES (Otras secciones) */
+.tarjeta, .bloque-verde {
+    background-color: #111111 !important;
+    border: 1px solid #2ecc71 !important;
     padding: 20px;
-}
-
-.tarjeta-cuerpo h3 {
-    margin-bottom: 10px;
-    color: #2ecc71;
-    font-size: 22px;
-}
-
-.tarjeta-cuerpo p {
-    color: #ffffff !important; /* Forzado a blanco */
-}
-
-/* Bloques de información (Acciones y Ayuda) */
-.bloque-verde {
-    background-color: #0c1a10; /* Fondo verde muy oscuro para que el texto blanco resalte */
-    padding: 35px;
+    margin-top: 20px;
     border-radius: 15px;
-    margin-top: 25px;
-    border: 1px solid #2ecc71;
 }
 
-.bloque-verde ul li {
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: #ffffff !important; /* Texto de lista en blanco puro */
-    font-weight: 600; /* Letra clara y fuerte */
-}
-
-/* Footer */
+/* 7. FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    background-color: #080808;
-    color: #ffffff; /* Texto del pie de página también blanco */
-    margin-top: 60px;
+    padding: 40px;
+    background-color: #000000;
     border-top: 2px solid #2ecc71;
+}
+
+footer p {
+    color: #ffffff !important;
 }
